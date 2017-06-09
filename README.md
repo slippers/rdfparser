@@ -2,6 +2,15 @@
 title: 'rdfxml.py: An RDF/XML Parser in under 10KB of Python'
 ...
 
+
+# original source
+
+copied from [source](http://infomesh.net/2003/rdfparser/)
+
+altered code to make it work with python 3
+
+
+
 rdfxml.py - An RDF/XML Parser in Python
 =======================================
 
