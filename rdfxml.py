@@ -85,7 +85,7 @@ class RDFParser(xml.sax.handler.ContentHandler):
     def literal(self, s, lang=None, dtype=None):
         if lang and dtype:
             raise #"ParseError", "Can't have both"
-        return ''.join(('"%s"' % r_quot.sub('\g<1>\\"', repr(str(s))[2:-1]), lang and ("@" + lang) or '', dtype and ("^^<%s>" % dtype) or ''))
+        return ''.join(('"%s"' % r_quot.sub('\g<1>\\"', repr(str(s))[1:-1]), lang and ("@" + lang) or '', dtype and ("^^<%s>" % dtype) or ''))
 
     def document(self, doc):
        assert doc.URI == rdf.RDF, "Couldn't find rdf:RDF element"
